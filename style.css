@@ -1,12 +1,53 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: 'Merriweather', serif;
 }
 
-.container{
-    width: 100vw;
-    height: 100vh;
-    background-image: url(./images/pexels-anna-tarazevich-6501742.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/pexels-anna-tarazevich-6501742.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+input{
+    font-size: 1rem;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    outline: none;
+    color: black;
+    text-align: center;
+}
+
+.temperature-container{
+    display: flex;
+}
+
+.weather-text{
+    font-size: 2.5rem;
+}
+
+.city{
+    font-size: 2.5rem;
+}
+
+.temperature{
+    font-size: 4rem;
+}
+
+.temperature-sign{
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
 }
