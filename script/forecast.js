@@ -21,10 +21,13 @@ const getCity = async (city) =>{
    return data[0]
 }
 
-getCity('vaxjo')
-.then( data =>{
-    return getWeather(data.Key)
-})
-.then(data => console.log(data))
-.catch(err => console.log(err))
-
+getCity('Stockholm')
+    .then(data =>{  
+        if(data === undefined) return
+        city.innerHTML = `${data.EnglishName}, ${data.Country.EnglishName}`
+        return getWeather(data.Key)
+    })
+    .then(data =>{
+        weatherText.innerHTML = data.WeatherText;
+        temperature.innerHTML = data.Temperature.Metric.Value
+    })
